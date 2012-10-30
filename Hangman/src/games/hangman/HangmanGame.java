@@ -1,7 +1,9 @@
 package games.hangman;
 
 /**
+ * Hangman Game
  * 
+ * @see http://en.wikipedia.org/wiki/Hangman_%28game%29
  * @author marco.mangan@gmail.com
  *
  */
@@ -28,7 +30,7 @@ public class HangmanGame {
 		return word;
 	}
 
-	private String fillString(int length) {
+	private static String fillString(int length) {
 		String s = "";
 		for (int i = 0; i < length; i++) {
 			s += "-";
@@ -64,7 +66,7 @@ public class HangmanGame {
 		return false;
 	}
 
-	private String replace(String s, String w, String g) {
+	private static String replace(String s, String w, String g) {
 		String result = "";
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == g.charAt(0)) {
@@ -76,10 +78,18 @@ public class HangmanGame {
 		return result;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public boolean isEndOfGame() {
 		return win() || lose();
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public boolean lose() {
 		return misses.length() >= 11;
 		//1,2,3,4,5,6
@@ -87,6 +97,10 @@ public class HangmanGame {
 		//         11 
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public boolean win() {
 		return secretWord.equals(word);
 	}
@@ -97,10 +111,20 @@ public class HangmanGame {
 	 */
 	public String getSecretWord() {
 		if (isEndOfGame()) {
-			return secretWord;
+			return String.format("(game finished) %s", getSecretWord());
 		} else {
-			return getWord();
+			return String.format("(in game) %s", getWord());
 		}
 	}
 
+	/**
+	 * 
+	 */
+	@Override
+	public String toString() {
+		return String.format("HangmanGame [secretWord=%s, misses=%s, word=%s]",
+				isEndOfGame()?secretWord:word, misses, word);
+	}
+
+	
 }

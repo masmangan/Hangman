@@ -3,7 +3,7 @@ package games.hangman;
 import java.util.Scanner;
 
 /**
- * http://en.wikipedia.org/wiki/Hangman_%28game%29
+ * @see http://en.wikipedia.org/wiki/Hangman_%28game%29
  * 
  * @author marco.mangan@gmail.com
  * 
@@ -31,12 +31,10 @@ public class Main {
 		}
 		
 		if (game.win()) {
-			System.out.println("Parabéns!");
-			System.out.printf("A palavra é: %s!", game.getSecretWord());
+			System.out.printf("Guesser wins - the answer was %s.", game.getSecretWord());			
 		}
 		if (game.lose()) {
-			System.out.println("Que pena!");
-			System.out.printf("A palavra é: %s!", game.getSecretWord());			
+			System.out.printf("Guesser loses  - the answer was %s.", game.getSecretWord());			
 		}
 
 	}
