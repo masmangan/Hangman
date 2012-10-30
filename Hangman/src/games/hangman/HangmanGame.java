@@ -106,12 +106,12 @@ public class HangmanGame {
 	}
 
 	/**
-	 * 
+	 * Returns word in game. After the game is finished, returns the secret word.
 	 * @return
 	 */
 	public String getSecretWord() {
 		if (isEndOfGame()) {
-			return String.format("(game finished) %s", getSecretWord());
+			return String.format("(game finished) %s", secretWord);
 		} else {
 			return String.format("(in game) %s", getWord());
 		}
