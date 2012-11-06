@@ -29,6 +29,7 @@ public class Main {
 			game.tryGuess(letra);
 			System.out.printf("Misses: %s\n", game.getMisses());
 		}
+		teclado.close();
 		
 		if (game.win()) {
 			System.out.printf("Guesser wins - the answer was %s.", game.getSecretWord());			
@@ -36,7 +37,5 @@ public class Main {
 		if (game.lose()) {
 			System.out.printf("Guesser loses  - the answer was %s.", game.getSecretWord());			
 		}
-
 	}
-
 }

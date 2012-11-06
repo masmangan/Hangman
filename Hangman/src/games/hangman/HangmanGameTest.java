@@ -74,5 +74,4 @@ public class HangmanGameTest {
 		assertEquals(expected, actual);
 	}	
 	
-	
 }

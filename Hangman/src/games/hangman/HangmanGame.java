@@ -4,6 +4,7 @@ package games.hangman;
  * Hangman Game
  * 
  * @see http://en.wikipedia.org/wiki/Hangman_%28game%29
+ * 
  * @author marco.mangan@gmail.com
  *
  */
