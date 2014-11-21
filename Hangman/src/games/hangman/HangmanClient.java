@@ -6,11 +6,28 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * 
+ * @author marco.mangan@gmail.com
+ *
+ */
 public class HangmanClient {
 
+	/**
+	 * 
+	 */
 	public static final String SERVER_HOSTNAME = "localhost";
+	
+	/**
+	 * 
+	 */
 	public static final int SERVER_PORT = 2002;
 
+	/**
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		System.out.println("HangmanClient!");
 

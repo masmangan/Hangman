@@ -9,8 +9,20 @@ package games.hangman;
  *
  */
 public class HangmanGame {
+	
+	/**
+	 * 
+	 */
 	private String secretWord;
+	
+	/**
+	 * 
+	 */
 	private String misses;
+	
+	/**
+	 * 
+	 */
 	private String word;
 
 	/**
@@ -31,6 +43,11 @@ public class HangmanGame {
 		return word;
 	}
 
+	/**
+	 * 
+	 * @param length
+	 * @return
+	 */
 	private static String fillString(int length) {
 		String s = "";
 		for (int i = 0; i < length; i++) {
@@ -67,6 +84,13 @@ public class HangmanGame {
 		return false;
 	}
 
+	/**
+	 * 
+	 * @param s
+	 * @param w
+	 * @param g
+	 * @return
+	 */
 	private static String replace(String s, String w, String g) {
 		String result = "";
 		for (int i = 0; i < s.length(); i++) {

@@ -14,14 +14,39 @@ import java.net.Socket;
  */
 public class Play implements Runnable {
 
+	/**
+	 * 
+	 */
 	private GameState state;
+	
+	/**
+	 * 
+	 */
 	private HangmanGame game;
+	
+	/**
+	 * 
+	 */
 	private Socket executioner;
+	
+	/**
+	 * 
+	 */
 	private PrintWriter executionerOut;
+	
+	/**
+	 * 
+	 */
 	private BufferedReader executionerIn;
 
+	/**
+	 * 
+	 */
 	private Socket victim;
 
+	/**
+	 * 
+	 */
 	public Play() {
 		state = GameState.CREATED;
 	}
@@ -31,6 +56,10 @@ public class Play implements Runnable {
 		state = GameState.FINISHED;
 	}
 
+	/**
+	 * 
+	 * @param executioner
+	 */
 	public void setExecutioner(Socket executioner) {
 		if (state != GameState.CREATED) {
 			throw new IllegalStateException();
@@ -61,6 +90,10 @@ System.out.println(4);
 		}
 	}
 
+	/**
+	 * 
+	 * @param secondSocket
+	 */
 	public void setVictim(Socket secondSocket) {
 		if (state != GameState.WAITING) {
 			throw new IllegalStateException();

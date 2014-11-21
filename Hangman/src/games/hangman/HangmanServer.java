@@ -10,8 +10,18 @@ import java.net.Socket;
  * 
  */
 public class HangmanServer {
+	
+
+	/**
+	 * 
+	 */
 	public static final int LISTENING_PORT = 2002;
 
+	/**
+	 * 
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		System.out.println("HangmanServer!");
 		ServerSocket serverSocket = new ServerSocket(LISTENING_PORT);

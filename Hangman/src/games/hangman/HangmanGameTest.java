@@ -4,6 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * 
+ * @author marco.mangan@gmail.com
+ *
+ */
 public class HangmanGameTest {
 
 	@Test
