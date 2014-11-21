@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author marco.mangan@gmail.com
  * 
  */
-public class Main {
+public class HangmanSolo {
 
 	/**
 	 * @param args

@@ -9,7 +9,7 @@ import java.net.Socket;
 /**
  * 
  * @author marco.mangan@gmail.com
- *
+ * 
  */
 public class HangmanClient {
 
@@ -17,7 +17,7 @@ public class HangmanClient {
 	 * 
 	 */
 	public static final String SERVER_HOSTNAME = "localhost";
-	
+
 	/**
 	 * 
 	 */
@@ -50,9 +50,17 @@ public class HangmanClient {
 		System.out.printf("Connected to server %s:%s.\n", SERVER_HOSTNAME,
 				SERVER_PORT);
 		String message = inFromServer.readLine();
-		System.out.println(message);
-		outToServer.println("WORD:HANGMAN");
-		outToServer.flush();
+
+		System.out.printf("**Messagem from server**\n", message);
+
+		if ("EXECUTIONER".equals(message)) {
+			System.out.println(message);
+			outToServer.println("WORD:HANGMAN");
+			outToServer.flush();
+		}
+		
+		System.in.read();
+		System.out.println("**End**");
 
 	}
 }
